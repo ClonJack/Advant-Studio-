@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Runtime.Input;
 using Runtime.Interfaces;
+using Runtime.Views.Business;
 using UnityEngine;
 using Zenject;
 
@@ -16,13 +17,11 @@ namespace Runtime.Installers.Project
             BindServices();
             BindSignals();
         }
-
-
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<MasterInput>().AsSingle();
+            Container.BindInterfacesAndSelfTo<BusinessDataService>().AsSingle();
         }
-
         private void BindSignals()
         {
             var types = typeof(ISignal).Assembly.GetTypes()

@@ -1,5 +1,4 @@
 ﻿using System;
-using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -14,7 +13,6 @@ namespace Runtime.Input
             _playerInput = new PlayerInput();
             
             _playerInput?.Enable();
-            Debug.Log("PlayerInput");
         }
 
         public void Dispose()

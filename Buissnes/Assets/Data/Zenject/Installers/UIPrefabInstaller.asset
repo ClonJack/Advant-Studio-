@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad0405b0816435f8b111444531ec998, type: 3}
   m_Name: UIPrefabInstaller
   m_EditorClassIdentifier: 
-  _canvas: {fileID: 4015166885735833961, guid: c9307620470a0f641ad6364cdaa5d679, type: 3}
+  _screens: {fileID: 84312836984382515, guid: a80371354db32034195128b5388fc608, type: 3}
   _eventSystem: {fileID: 2070332534453727909, guid: a6be85c36ede68a46849bcfe43990e33, type: 3}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UniRx;
+using UnityEngine;
 using UnityEngine.UI;
 using Slider = UnityEngine.UI.Slider;
 
@@ -8,10 +9,9 @@ namespace Utilities.Fixes
     {
         [SerializeField] private Scrollbar _scrollbar;
         [SerializeField] private Slider _slider;
-
-        public void UpdateScrollPosition()
+        private void Start()
         {
-            _scrollbar.value = _slider.value;
+            _scrollbar.OnValueChangedAsObservable().Subscribe(x => { _slider.value = _scrollbar.value; }).AddTo(this);
         }
     }
 }

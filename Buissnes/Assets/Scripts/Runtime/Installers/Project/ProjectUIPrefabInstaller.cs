@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using Runtime.Views.Screens;
+using UnityEngine;
 using Zenject;
 
 namespace Runtime.Installers.Project
@@ -7,13 +7,11 @@ namespace Runtime.Installers.Project
     [CreateAssetMenu(menuName = "Installers/UIPrefabInstaller", fileName = "UIPrefabInstaller")]
     public class ProjectUIPrefabInstaller : ScriptableObjectInstaller
     {
-        [Header("Base")] [SerializeField] private Canvas _canvas;
-        [SerializeField] private EventSystem _eventSystem;
+        [Header("Base")] [SerializeField] private ScreenView _screens;
 
         public override void InstallBindings()
         {
-            Container.InstantiatePrefabForComponent<Canvas>(_canvas);
-            Container.InstantiatePrefabForComponent<EventSystem>(_eventSystem);
+            Container.BindInterfacesAndSelfTo<ScreenView>().FromComponentInNewPrefab(_screens).AsSingle();
         }
     }
 }

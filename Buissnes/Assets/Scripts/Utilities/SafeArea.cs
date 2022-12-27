@@ -23,7 +23,8 @@ public class SafeArea : MonoBehaviour
     {
         _parentRectTransform = GetComponent<RectTransform>();
         #if UNITY_EDITOR
-        ApplySafeAreaOnStart();
+        ForceApply();
+
 #endif
     }
 
@@ -33,13 +34,13 @@ public class SafeArea : MonoBehaviour
         ApplySafeArea(scaler);
     }
 
-    #if UNITY_EDITOR
-    private void Update()
-    {
-        if (_lastSafeArea == Screen.safeArea) return;
-        EditorApplySafeArea();
-    }
-    #endif
+    // #if UNITY_EDITOR
+    // private void Update()
+    // {
+    //     if (_lastSafeArea == Screen.safeArea) return;
+    //     EditorApplySafeArea();
+    // }
+    // #endif
 
     private void EditorApplySafeArea()
     {
