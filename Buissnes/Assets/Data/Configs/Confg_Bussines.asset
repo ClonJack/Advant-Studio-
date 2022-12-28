@@ -10,51 +10,71 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da97b02c5df84ec1a7bfc4118419e4cb, type: 3}
-  m_Name: DataBase_Business
+  m_Name: Confg_Bussines
   m_EditorClassIdentifier: 
   _concreteDataModels:
-  - _delayedIncoming: 3
-    _baseCost: 3
-    _baseIncoming: 3
-    _upgradeDataModel1:
+  - Name: Company 1
+    DelayedIncoming: 3
+    BaseCost: 3
+    BaseIncoming: 3
+    Level: 1
+    UpgradeDataModel1:
+      Name: Up 1
       Price: 50
       IncomeMultiplierPercentages: 50
-    _upgradeDataModel2:
+    UpgradeDataModel2:
+      Name: Up 2
       Price: 400
       IncomeMultiplierPercentages: 100
-  - _delayedIncoming: 6
-    _baseCost: 40
-    _baseIncoming: 40
-    _upgradeDataModel1:
+  - Name: Company 2
+    DelayedIncoming: 6
+    BaseCost: 40
+    BaseIncoming: 40
+    Level: 0
+    UpgradeDataModel1:
+      Name: Up 1
       Price: 1200
       IncomeMultiplierPercentages: 100
-    _upgradeDataModel2:
+    UpgradeDataModel2:
+      Name: Up 2
       Price: 4000
       IncomeMultiplierPercentages: 200
-  - _delayedIncoming: 10
-    _baseCost: 200
-    _baseIncoming: 200
-    _upgradeDataModel1:
+  - Name: Company 3
+    DelayedIncoming: 10
+    BaseCost: 200
+    BaseIncoming: 200
+    Level: 0
+    UpgradeDataModel1:
+      Name: Up 1
       Price: 6000
       IncomeMultiplierPercentages: 100
-    _upgradeDataModel2:
+    UpgradeDataModel2:
+      Name: Up 2
       Price: 20000
       IncomeMultiplierPercentages: 150
-  - _delayedIncoming: 17
-    _baseCost: 1000
-    _baseIncoming: 1000
-    _upgradeDataModel1:
+  - Name: Company 4
+    DelayedIncoming: 17
+    BaseCost: 1000
+    BaseIncoming: 1000
+    Level: 0
+    UpgradeDataModel1:
+      Name: Up 1
       Price: 15000
       IncomeMultiplierPercentages: 100
-    _upgradeDataModel2:
+    UpgradeDataModel2:
+      Name: Up 2
       Price: 50000
       IncomeMultiplierPercentages: 200
-  - _delayedIncoming: 30
-    _baseCost: 5000
-    _baseIncoming: 5000
-    _upgradeDataModel1:
+  - Name: Company 5
+    DelayedIncoming: 30
+    BaseCost: 5000
+    BaseIncoming: 5000
+    Level: 0
+    UpgradeDataModel1:
+      Name: Up 1
       Price: 100000
       IncomeMultiplierPercentages: 200
-    _upgradeDataModel2:
+    UpgradeDataModel2:
+      Name: Up 2
       Price: 500000
       IncomeMultiplierPercentages: 400

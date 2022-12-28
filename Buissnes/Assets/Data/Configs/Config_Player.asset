@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a534f462ab5546db88be50460bb8c744, type: 3}
-  m_Name: ProjectInstaller
+  m_Script: {fileID: 11500000, guid: f4dcf493b79945dd88be4ebd20a7483b, type: 3}
+  m_Name: Config_Player
   m_EditorClassIdentifier: 
-  _dataBaseBusiness: {fileID: 11400000, guid: 4199feaf8620031479376fb6a972bd89, type: 2}
+  _concretePlayer:
+    Balance: 150
