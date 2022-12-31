@@ -3,6 +3,6 @@
     [System.Serializable]
     public class ConcretePlayerModel
     {
-        public int Balance;
+        public float Balance;
     }
 }

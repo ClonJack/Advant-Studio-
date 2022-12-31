@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using JetBrains.Annotations;
 using NaughtyAttributes;
 using Runtime.Save;
@@ -8,19 +9,24 @@ using UnityEngine;
 namespace Runtime.Configs
 {
     [CreateAssetMenu(fileName = "Business", menuName = "Config/Business", order = 0)]
-    public class ConfigBusinesses : ScriptableObject
+    public class ConfigBusinesses : ConfigBase
     {
         [SerializeField] private List<ConcreteBusinessDataModel> _concreteDataModels;
+        protected override string DirectoryName => GameSaver.BussinesSaver.DirectoryName;
+        protected override string FileName => GameSaver.BussinesSaver.DirectoryName;
 
         [Button]
         [UsedImplicitly]
-        private void GenerateConfig()
+        protected override void GenerateConfig()
         {
+            var separator = Path.DirectorySeparatorChar;
             for (var i = 0; i < _concreteDataModels.Count; i++)
             {
-                GameSaver.BussinesSaver.Save(_concreteDataModels[i], i);
-                Debug.Log(GameSaver.BussinesSaver.GetFilepath(i));
+                var filePath =
+                    $"{(Application.dataPath)}{separator}Resources{separator}{DirectoryName}{separator}{FileName}{i}";
+                GameSaver.BussinesSaver.Save(_concreteDataModels[i], i, filePath);
             }
+            base.GenerateConfig();
         }
     }
 }

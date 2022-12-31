@@ -9,8 +9,8 @@ namespace Runtime.Save.Base
     {
         private const int DefaultSlot = 0;
         private const int MaxSavesCount = 10;
-        protected abstract string DirectoryName { get; }
-        protected abstract string FileName { get; }
+        public abstract string DirectoryName { get; }
+        public abstract string FileName { get; }
 
         public virtual void Save(T data, int slot = DefaultSlot)
         {
@@ -18,6 +18,15 @@ namespace Runtime.Save.Base
             var serializedData = JsonConvert.SerializeObject(data);
 
             var file = new FileInfo($"{filepath}");
+            file.Directory?.Create();
+
+            File.WriteAllText(file.FullName, serializedData);
+        }
+
+        public virtual void Save(T data, int slot, string filepath)
+        {
+            var serializedData = JsonConvert.SerializeObject(data);
+            var file = new FileInfo($"{filepath}.json");
             file.Directory?.Create();
 
             File.WriteAllText(file.FullName, serializedData);
@@ -54,9 +63,9 @@ namespace Runtime.Save.Base
 
         public void Reset()
         {
-            for (int i = 0; i < MaxSavesCount; i++)
+            for (var i = 0; i < MaxSavesCount; i++)
             {
-                string filepath = GetFilepath(i);
+                var filepath = GetFilepath(i);
 
                 if (!File.Exists(filepath)) continue;
 
@@ -69,9 +78,9 @@ namespace Runtime.Save.Base
 
         public virtual string GetFilepath(int slot)
         {
-            char separator = Path.DirectorySeparatorChar;
+            var separator = Path.DirectorySeparatorChar;
             return
-                $"{Application.persistentDataPath}{separator}Saves{separator}{DirectoryName}{separator}{GetFullFileName(slot)}.json";
+                $"{Application.persistentDataPath}{separator}Saves{separator}{DirectoryName}{separator}{GetFullFileName(slot)}";
         }
     }
 }

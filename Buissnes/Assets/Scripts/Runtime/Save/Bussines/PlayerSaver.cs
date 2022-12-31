@@ -5,7 +5,7 @@ namespace Runtime.Save.Bussines
 {
     public class PlayerSaver : Saver<ConcretePlayerModel>
     {
-        protected override string DirectoryName => "User";
-        protected override string FileName => "Player";
+        public override string DirectoryName => "User";
+        public override string FileName => "Player";
     }
 }

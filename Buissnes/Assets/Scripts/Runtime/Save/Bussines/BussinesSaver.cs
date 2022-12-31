@@ -5,7 +5,7 @@ namespace Runtime.Save.Bussines
 {
     public class BussinesSaver : Saver<ConcreteBusinessDataModel>
     {
-        protected override string DirectoryName => "Bussineses";
-        protected override string FileName => "Company";
+        public override string DirectoryName => "Companies";
+        public override string FileName => "Company";
     }
 }

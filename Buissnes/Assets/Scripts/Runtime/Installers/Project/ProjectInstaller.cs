@@ -3,7 +3,6 @@ using Runtime.Configs;
 using Runtime.Input;
 using Runtime.Interfaces;
 using Runtime.Save;
-using Runtime.Views.Business;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Zenject;
@@ -22,12 +21,14 @@ namespace Runtime.Installers.Project
             BindServices();
             BindSignals();
             BindData();
+
+            Application.targetFrameRate = 120;
         }
 
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<MasterInput>().AsSingle();
-            Container.BindInterfacesAndSelfTo<LoaderService>().AsSingle();
+            Container.BindInterfacesAndSelfTo<LoaderAndSaverService>().AsSingle();
         }
 
         private void BindData()

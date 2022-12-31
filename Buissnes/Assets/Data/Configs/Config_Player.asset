@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Config_Player
   m_EditorClassIdentifier: 
   _concretePlayer:
-    Balance: 150
+    Balance: 5000

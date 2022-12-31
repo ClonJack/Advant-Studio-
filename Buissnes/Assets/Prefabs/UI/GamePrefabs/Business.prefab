@@ -437,24 +437,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bf10ae42384dbf94403f5ce1adc12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _generalModel:
+  generalView:
     _nameInfo: {fileID: 1757306249738651983}
     _lvlInfo: {fileID: 1757306249327405996}
     _incomeInfo: {fileID: 1757306249934002421}
     _progressBar: {fileID: 1757306250363491419}
-  _upgradeLevelModel:
+  upgradeLevelView:
     _priceInfo: {fileID: 1757306250829590156}
     _icon: {fileID: 1757306249409746532}
-  _upgradeBusinessModelRight:
+    Duration: 0.25
+    SelectV3: {x: 0.5, y: 0.5, z: 0.5}
+    UnSelectV3: {x: 1, y: 1, z: 1}
+  upgradeBusinessViewRight:
     _nameInfo: {fileID: 1757306250023118762}
-    _incomePercentagesValueInfo: {fileID: 1757306250130950788}
     _infoStateInfo: {fileID: 1757306249768186088}
+    _incomePercentagesValueInfo: {fileID: 1757306250130950788}
     _icon: {fileID: 1757306249085684774}
-  _upgradeBusinessModelLeft:
+    Duration: 0.25
+    SelectV3: {x: 0.5, y: 0.5, z: 0.5}
+    UnSelectV3: {x: 1, y: 1, z: 1}
+  upgradeBusinessViewLeft:
     _nameInfo: {fileID: 1757306250599418023}
-    _incomePercentagesValueInfo: {fileID: 1757306250305204893}
     _infoStateInfo: {fileID: 1757306249855794855}
+    _incomePercentagesValueInfo: {fileID: 1757306250305204893}
     _icon: {fileID: 1757306249063544879}
+    Duration: 0.25
+    SelectV3: {x: 0.5, y: 0.5, z: 0.5}
+    UnSelectV3: {x: 1, y: 1, z: 1}
 --- !u!1 &1757306249215798956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2679,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 10.4
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3024,7 +3033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

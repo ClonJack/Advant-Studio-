@@ -7,9 +7,10 @@ namespace Runtime.Save.ConcreteModel.Business
     {
         [Header("General")] public string Name;
         public int DelayedIncoming;
-        public int BaseCost;
+        public float BaseCost;
         public int BaseIncoming;
         public int Level;
+        public float Progress;
 
         [Header("Upgrade 1")] [SerializeField] public UpgradeDataModel UpgradeDataModel1;
         [Header("Upgrade 2")] [SerializeField] public UpgradeDataModel UpgradeDataModel2;

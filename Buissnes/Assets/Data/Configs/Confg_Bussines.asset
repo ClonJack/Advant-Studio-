@@ -18,63 +18,78 @@ MonoBehaviour:
     BaseCost: 3
     BaseIncoming: 3
     Level: 1
+    Progress: 0
     UpgradeDataModel1:
       Name: Up 1
       Price: 50
       IncomeMultiplierPercentages: 50
+      IsPurchased: 0
     UpgradeDataModel2:
       Name: Up 2
       Price: 400
       IncomeMultiplierPercentages: 100
+      IsPurchased: 0
   - Name: Company 2
     DelayedIncoming: 6
     BaseCost: 40
     BaseIncoming: 40
     Level: 0
+    Progress: 0
     UpgradeDataModel1:
       Name: Up 1
       Price: 1200
       IncomeMultiplierPercentages: 100
+      IsPurchased: 0
     UpgradeDataModel2:
       Name: Up 2
       Price: 4000
       IncomeMultiplierPercentages: 200
+      IsPurchased: 0
   - Name: Company 3
     DelayedIncoming: 10
     BaseCost: 200
     BaseIncoming: 200
     Level: 0
+    Progress: 0
     UpgradeDataModel1:
       Name: Up 1
       Price: 6000
       IncomeMultiplierPercentages: 100
+      IsPurchased: 0
     UpgradeDataModel2:
       Name: Up 2
       Price: 20000
       IncomeMultiplierPercentages: 150
+      IsPurchased: 0
   - Name: Company 4
     DelayedIncoming: 17
     BaseCost: 1000
     BaseIncoming: 1000
     Level: 0
+    Progress: 0
     UpgradeDataModel1:
       Name: Up 1
       Price: 15000
       IncomeMultiplierPercentages: 100
+      IsPurchased: 0
     UpgradeDataModel2:
       Name: Up 2
       Price: 50000
       IncomeMultiplierPercentages: 200
+      IsPurchased: 0
   - Name: Company 5
     DelayedIncoming: 30
     BaseCost: 5000
     BaseIncoming: 5000
     Level: 0
+    Progress: 0
     UpgradeDataModel1:
       Name: Up 1
       Price: 100000
       IncomeMultiplierPercentages: 200
+      IsPurchased: 0
     UpgradeDataModel2:
       Name: Up 2
       Price: 500000
       IncomeMultiplierPercentages: 400
+      IsPurchased: 0
