@@ -6,7 +6,7 @@ using Runtime.Save;
 using Runtime.Save.ConcreteModel.Business;
 using UnityEngine;
 
-namespace Runtime.Configs
+namespace Runtime.Configs.Save
 {
     [CreateAssetMenu(fileName = "Business", menuName = "Config/Business", order = 0)]
     public class ConfigBusinesses : ConfigBase

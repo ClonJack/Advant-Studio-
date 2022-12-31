@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Runtime.Configs
+namespace Runtime.Configs.Save
 {
     public abstract class ConfigBase : ScriptableObject
     {

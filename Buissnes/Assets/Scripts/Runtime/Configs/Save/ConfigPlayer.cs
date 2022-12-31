@@ -5,7 +5,7 @@ using Runtime.Save;
 using Runtime.Save.ConcreteModel.Player;
 using UnityEngine;
 
-namespace Runtime.Configs
+namespace Runtime.Configs.Save
 {
     [CreateAssetMenu(fileName = "Player", menuName = "Config/Player", order = 0)]
     public class ConfigPlayer : ConfigBase
