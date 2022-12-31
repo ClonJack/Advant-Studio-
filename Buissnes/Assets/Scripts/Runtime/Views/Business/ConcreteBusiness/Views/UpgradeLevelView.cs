@@ -19,7 +19,7 @@ namespace Runtime.Views.Business.ConcreteBusiness.Views
         public Image Icon => _icon;
         public void RepaintPrice(float price)
         {
-            _priceInfo.text = $"{price}";
+            _priceInfo.text = $"{price}$";
         }
 
         public async UniTask Select()

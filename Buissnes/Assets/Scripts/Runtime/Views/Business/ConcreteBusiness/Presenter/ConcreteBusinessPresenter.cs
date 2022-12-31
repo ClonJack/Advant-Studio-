@@ -40,7 +40,7 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
         {
             GeneralInfo();
             UpgradeLevel();
-            RepaintPriceLevel();
+
             UpgradeButton(_reactiveBusinessModel.UpgradeReactiveDataModel1, _businessView.UpgradeBusinessViewRight,
                 _concreteBusinessDataModel.UpgradeDataModel1);
             UpgradeButton(_reactiveBusinessModel.UpgradeReactiveDataModel2, _businessView.UpgradeBusinessViewLeft,
@@ -67,7 +67,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                     upgradeDataModel.IsPurchased = modelUpgrade.IsPurchased.Value;
                     _businessView.GeneralView.RepaintIncomeInfo($"{GetIncoming()}");
                     upgradeView.RepaintPurchasedState();
-                //    GameSaver.BussinesSaver.Save(_concreteBusinessDataModel);
                 }
             }).AddTo(_businessView);
             modelUpgrade.Price.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
@@ -105,6 +104,7 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
 
         private void UpgradeLevel()
         {
+            RepaintPriceLevel();
             _businessView.UpgradeLevelView.Icon.OnPointerClickAsObservable()
                 .Subscribe((data => OnClickUpgradeLevel(data).Forget()))
                 .AddTo(_businessView);
@@ -142,7 +142,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                     _concreteBusinessDataModel.Level = _reactiveBusinessModel.Level.Value;
                     _businessView.GeneralView.RepaintLevelInfo(x.ToString());
                     RepaintPriceLevel();
-                 //   GameSaver.BussinesSaver.Save(_concreteBusinessDataModel, _slot);
                 })
                 .AddTo(_businessView);
 
@@ -159,7 +158,7 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                     var startValue = _businessView.GeneralView.ProgressBar.minValue;
                     var endValue = _businessView.GeneralView.ProgressBar.maxValue;
                     var duration = _concreteBusinessDataModel.DelayedIncoming;
-                    Observable.EveryUpdate().Subscribe(x =>
+                    Observable.EveryUpdate().Where(_ => _reactiveBusinessModel.Level.Value != 0).Subscribe(x =>
                     {
                         _businessView.GeneralView.ProgressBar.value =
                             Mathf.Lerp(startValue, endValue, timeElapsed / duration);
@@ -172,7 +171,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                         }
 
                         _concreteBusinessDataModel.Progress = timeElapsed;
-                    //    GameSaver.BussinesSaver.Save(_concreteBusinessDataModel, _slot);
                     }).AddTo(_businessView);
                 })
                 .AddTo(_businessView);
@@ -203,7 +201,5 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                 _reactiveBusinessModel.Level.Value * _concreteBusinessDataModel.BaseCost *
                 (1 + multiplier1 + multiplier2);
         }
-
-       
     }
 }

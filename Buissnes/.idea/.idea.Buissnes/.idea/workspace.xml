@@ -2,76 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c424c7d-f085-4d95-aae4-677485378601" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/ConfigBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/ConfigBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/GameInstaller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/GameInstaller.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalUpgradeLevel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalUpgradeLevel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Models/ConcreteReactiveBusinessModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Models/ConcreteReactiveBusinessModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Models/UpgradeReactiveDataModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Models/UpgradeReactiveDataModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Models/ConcreteReactivePlayerModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Models/ConcreteReactivePlayerModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Presentor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Presentor/ConcretePlayerPresenter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Presentor/ConcretePlayerPresenter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Buissnes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Buissnes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Configs/Confg_Bussines.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Configs/Confg_Bussines.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Configs/Config_Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Data/Configs/Config_Player.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GamePrefabs/Business.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GamePrefabs/Business.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/GamePrefabs/Screens.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/GamePrefabs/Screens.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company0.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company1.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company2.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company3.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Company4.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/User/Player0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/User/Player0.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/ConfigBusinesses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/ConfigBusinesses.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/ConfigPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/ConfigPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/ProjectInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Base/Saver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Base/Saver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Bussines/BussinesSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Bussines/BussinesSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Bussines/PlayerSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Bussines/PlayerSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business/ConcreteBusinessDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business/ConcreteBusinessDataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business/UpgradeDataModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business/UpgradeDataModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Player/ConcretePlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Player/ConcretePlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderAndSaverService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderService.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderAndSaverService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalBalance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalSend.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalBalance.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/BusinessManagementView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/BusinessManagementView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Models.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models/GeneralModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/GeneralView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models/GeneralModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/GeneralView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models/UpgradeBusinessModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/UpgradeBusinessView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models/UpgradeBusinessModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/UpgradeBusinessView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models/UpgradeLevelModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/UpgradeLevelView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Models/UpgradeLevelModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/UpgradeLevelView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Views.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Views/BusinessView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/BusinessView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBussines/Views/BusinessView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/BusinessView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View/PlayerInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/PlayerInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View/PlayerInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/UpgradeLevelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/UpgradeLevelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Models/ConcreteReactivePlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Models/ConcreteReactivePlayerModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +19,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/21/56a916f0/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/8e/dfa920d4/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a31731933e0419ca5a995305014ad37157a00/ef/343445f2/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/8f/6daf9f6c/Void.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/39/d4a83faa/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/3c/4e824eef/TweenExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/69/84368757/DOVirtual.cs" root0="SKIP_HIGHLIGHTING" />
@@ -167,6 +105,7 @@
       <workItem from="1672406476253" duration="15704000" />
       <workItem from="1672429344638" duration="10648000" />
       <workItem from="1672452075883" duration="1896000" />
+      <workItem from="1672456600594" duration="726000" />
     </task>
     <servers />
   </component>

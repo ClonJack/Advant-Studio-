@@ -6,7 +6,6 @@ namespace Runtime.Views.Business.Player.Models
     public class ConcreteReactivePlayerModel
     {
         public ReactiveProperty<float> Balance = new ReactiveProperty<float>();
-
         public ConcreteReactivePlayerModel(ConcretePlayerModel concretePlayerModel)
         {
             Balance.Value = concretePlayerModel.Balance;
