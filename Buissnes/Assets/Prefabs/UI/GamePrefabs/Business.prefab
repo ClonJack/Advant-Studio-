@@ -437,18 +437,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bf10ae42384dbf94403f5ce1adc12f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generalView:
+  _generalView:
     _nameInfo: {fileID: 1757306249738651983}
     _lvlInfo: {fileID: 1757306249327405996}
     _incomeInfo: {fileID: 1757306249934002421}
     _progressBar: {fileID: 1757306250363491419}
-  upgradeLevelView:
+  _upgradeLevelView:
     _priceInfo: {fileID: 1757306250829590156}
     _icon: {fileID: 1757306249409746532}
     Duration: 0.25
     SelectV3: {x: 0.5, y: 0.5, z: 0.5}
     UnSelectV3: {x: 1, y: 1, z: 1}
-  upgradeBusinessViewRight:
+  _upgradeBusinessViewRight:
     _nameInfo: {fileID: 1757306250023118762}
     _infoStateInfo: {fileID: 1757306249768186088}
     _incomePercentagesValueInfo: {fileID: 1757306250130950788}
@@ -456,7 +456,7 @@ MonoBehaviour:
     Duration: 0.25
     SelectV3: {x: 0.5, y: 0.5, z: 0.5}
     UnSelectV3: {x: 1, y: 1, z: 1}
-  upgradeBusinessViewLeft:
+  _upgradeBusinessViewLeft:
     _nameInfo: {fileID: 1757306250599418023}
     _infoStateInfo: {fileID: 1757306249855794855}
     _incomePercentagesValueInfo: {fileID: 1757306250305204893}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 1757306249409746532}
   - component: {fileID: 1757306249409746539}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonLevlUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -914,10 +914,10 @@ RectTransform:
   m_Father: {fileID: 1757306249177933508}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 221.01, y: 20.983}
-  m_SizeDelta: {x: 327.6453, y: 0}
+  m_AnchorMin: {x: 0.5626424, y: 0.38607007}
+  m_AnchorMax: {x: 0.9215416, y: 0.6898067}
+  m_AnchoredPosition: {x: 0, y: 5.2457495}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1757306249409746533
 CanvasRenderer:

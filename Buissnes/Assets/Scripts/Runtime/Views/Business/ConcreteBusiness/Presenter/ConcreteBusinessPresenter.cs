@@ -1,6 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using DG.Tweening;
-using Runtime.Save;
 using Runtime.Save.ConcreteModel.Business;
 using Runtime.Views.Business.ConcreteBusiness.Models;
 using Runtime.Views.Business.ConcreteBusiness.Views;
@@ -9,7 +7,6 @@ using UniRx;
 using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Zenject;
 
 namespace Runtime.Views.Business.ConcreteBusiness.Presenter
 {
@@ -20,22 +17,18 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
 
         private readonly ConcreteBusinessDataModel _concreteBusinessDataModel;
         private readonly BusinessView _businessView;
-        private readonly SignalBus _signalBus;
-        private readonly int _slot;
         private readonly ConcretePlayerPresenter _concretePlayerPresenter;
 
         public ConcreteBusinessPresenter(ConcreteBusinessDataModel concreteBusinessDataModel, BusinessView businessView,
-            SignalBus signalBus, ConcretePlayerPresenter concretePlayerPresenter, int slot)
+            ConcretePlayerPresenter concretePlayerPresenter)
         {
             _concreteBusinessDataModel = concreteBusinessDataModel;
             _businessView = businessView;
-            _signalBus = signalBus;
-            _slot = slot;
+
             _concretePlayerPresenter = concretePlayerPresenter;
 
             _reactiveBusinessModel = new ConcreteReactiveBusinessModel(_concreteBusinessDataModel);
         }
-
         public void StartHandler()
         {
             GeneralInfo();
@@ -46,8 +39,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
             UpgradeButton(_reactiveBusinessModel.UpgradeReactiveDataModel2, _businessView.UpgradeBusinessViewLeft,
                 _concreteBusinessDataModel.UpgradeDataModel2);
         }
-
-
         private void UpgradeButton(UpgradeReactiveDataModel modelUpgrade, UpgradeBusinessView upgradeView,
             UpgradeDataModel upgradeDataModel)
         {
@@ -90,7 +81,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                     }
                 }).AddTo(_businessView);
         }
-
         private async UniTaskVoid OnClickUpgrade(UpgradeReactiveDataModel modelUpgrade, UpgradeBusinessView upgradeView)
         {
             if (_concretePlayerPresenter.ReactivePlayer.Balance.Value >= modelUpgrade.Price.Value)
@@ -101,7 +91,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                 await upgradeView.Deselect();
             }
         }
-
         private void UpgradeLevel()
         {
             RepaintPriceLevel();
@@ -109,7 +98,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                 .Subscribe((data => OnClickUpgradeLevel(data).Forget()))
                 .AddTo(_businessView);
         }
-
         private async UniTaskVoid OnClickUpgradeLevel(PointerEventData x)
         {
             var priceLevel = (_reactiveBusinessModel.Level.Value + 1) * _concreteBusinessDataModel.BaseCost;
@@ -120,15 +108,14 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
 
             await _businessView.UpgradeLevelView.Select();
             _reactiveBusinessModel.BaseCost.Value = GetIncoming();
+            _businessView.GeneralView.RepaintIncomeInfo($"{GetIncoming()}");
             await _businessView.UpgradeLevelView.Deselect();
         }
-
         private void RepaintPriceLevel()
         {
             var price = (_reactiveBusinessModel.Level.Value + 1) * _concreteBusinessDataModel.BaseCost;
             _businessView.UpgradeLevelView.RepaintPrice(price);
         }
-
         private void GeneralInfo()
         {
             _reactiveBusinessModel.Name.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
@@ -175,12 +162,10 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
                 })
                 .AddTo(_businessView);
         }
-
         private void OnFinish()
         {
             _concretePlayerPresenter.OnUpdateBalance(GetIncoming());
         }
-
         private float GetIncoming()
         {
             var income1 = _reactiveBusinessModel.UpgradeReactiveDataModel1.IsPurchased.Value

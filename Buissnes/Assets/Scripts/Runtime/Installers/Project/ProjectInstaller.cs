@@ -13,16 +13,13 @@ namespace Runtime.Installers.Project
     [CreateAssetMenu(menuName = "Installers/ProjectInstaller", fileName = "ProjectInstaller")]
     public class ProjectInstaller : ScriptableObjectInstaller
     {
-        [FormerlySerializedAs("_dataBaseBusiness")] [Header("Data")] [SerializeField] private ConfigBusinesses configBusinesses;
-
         public override void InstallBindings()
         {
             SignalBusInstaller.Install(Container);
 
             BindServices();
             BindSignals();
-            BindData();
-
+         
             Application.targetFrameRate = 120;
         }
 
@@ -31,12 +28,6 @@ namespace Runtime.Installers.Project
             Container.BindInterfacesAndSelfTo<MasterInput>().AsSingle();
             Container.BindInterfacesAndSelfTo<LoaderAndSaverService>().AsSingle();
         }
-
-        private void BindData()
-        {
-            Container.BindInstance(configBusinesses);
-        }
-
         private void BindSignals()
         {
             var types = typeof(ISignal).Assembly.GetTypes()

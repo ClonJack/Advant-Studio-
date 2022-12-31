@@ -11,7 +11,7 @@ namespace Runtime.Views.Business.Player.View
         {
             if (balance < 0)
             {
-                _balance.text = "0";
+                _balance.text = "0$";
                 return;
             }
 
