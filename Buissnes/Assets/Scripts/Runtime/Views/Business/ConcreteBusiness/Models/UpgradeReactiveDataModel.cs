@@ -10,7 +10,6 @@ namespace Runtime.Views.Business.ConcreteBusiness.Models
         public ReactiveProperty<float> Price = new ReactiveProperty<float>();
         public ReactiveProperty<int> IncomeMultiplierPercentages = new ReactiveProperty<int>();
         public ReactiveProperty<bool> IsPurchased = new ReactiveProperty<bool>();
-
         public UpgradeReactiveDataModel(UpgradeDataModel upgradeDataModel)
         {
             Name.Value = upgradeDataModel.Name;
