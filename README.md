@@ -2,7 +2,7 @@
 Кандидату предлагается сделать упрощенный прототип кликера, в котором игрок покупает и улучшает бизнесы, генерирующие доход.
 
 1)На выполнение задачи ушло 30+ часов
-2)Скачать билд можно по ссылке : https://drive.google.com/file/d/17n4edHT1leyTh6Izsb4OxW8i5V4bdWlP/view?usp=sharing
+2)Скачать билд можно по ссылке : https://drive.google.com/file/d/1hwM7ic3lB6l7vbGqak_PyPjIftHdzmkX/view?usp=sharing
 
 Для геймдизанера:
 В Tools->Saver->Выбранный бизнес
