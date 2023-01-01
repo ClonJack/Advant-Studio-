@@ -9,10 +9,5 @@ namespace Runtime.Installers.Project
         public override void InstallBindings()
         {
         }
-        
-        public void BindServices()
-        {
-          //  Container.BindInterfacesAndSelfTo<
-        }
     }
 }
