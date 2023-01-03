@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25d89ebf54744678b61aaee3d22b1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  businessManagementView: {fileID: 5392881330332883096}
+  _businessManagementView: {fileID: 5392881330332883096}
 --- !u!1001 &3408579731703821620
 PrefabInstance:
   m_ObjectHideFlags: 0

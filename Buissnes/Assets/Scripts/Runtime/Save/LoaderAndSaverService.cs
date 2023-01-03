@@ -62,7 +62,6 @@ namespace Runtime.Save
         {
             Observable.EveryApplicationPause().Subscribe(x =>
             {
-                Debug.Log("EveryApplicationPause");
                 GameSaver.PlayerSaver.Save(PlayerLoadModeL.Data[0]);
                 for (var i = 0; i < BussinesLoadModeL.Data.Count; i++)
                 {

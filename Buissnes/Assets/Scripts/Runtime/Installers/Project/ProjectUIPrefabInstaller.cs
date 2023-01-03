@@ -7,11 +7,11 @@ namespace Runtime.Installers.Project
     [CreateAssetMenu(menuName = "Installers/UIPrefabInstaller", fileName = "UIPrefabInstaller")]
     public class ProjectUIPrefabInstaller : ScriptableObjectInstaller
     {
-        [Header("Base")] [SerializeField] private ScreenView _screens;
+        [Header("Base")] [SerializeField] private ScreenServiceView _screens;
 
         public override void InstallBindings()
         {
-            Container.BindInterfacesAndSelfTo<ScreenView>().FromComponentInNewPrefab(_screens).AsSingle();
+            Container.BindInterfacesAndSelfTo<ScreenServiceView>().FromComponentInNewPrefab(_screens).AsSingle();
         }
     }
 }

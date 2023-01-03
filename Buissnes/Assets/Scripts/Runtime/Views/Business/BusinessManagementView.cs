@@ -18,7 +18,7 @@ namespace Runtime.Views.Business
 
         private ConcretePlayerPresenter _concretePlayerPresenter;
 
-        private void Start()
+        public void Repaint()
         {
             RepaintPlayerInfo();
             RepaintContainer();

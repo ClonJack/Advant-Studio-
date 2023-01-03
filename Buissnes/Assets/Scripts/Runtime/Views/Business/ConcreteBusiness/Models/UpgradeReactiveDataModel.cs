@@ -1,5 +1,6 @@
 ﻿using Runtime.Save.ConcreteModel.Business;
 using UniRx;
+using UnityEngine;
 
 namespace Runtime.Views.Business.ConcreteBusiness.Models
 {
