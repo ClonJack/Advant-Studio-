@@ -5,7 +5,7 @@ using Zenject;
 namespace Runtime.Installers.Project
 {
     [CreateAssetMenu(menuName = "Installers/UIPrefabInstaller", fileName = "UIPrefabInstaller")]
-    public class ProjectUIPrefabInstaller : ScriptableObjectInstaller
+    public class GameSceneUIInstaller : ScriptableObjectInstaller
     {
         [Header("Base")] [SerializeField] private ScreenServiceView _screens;
 

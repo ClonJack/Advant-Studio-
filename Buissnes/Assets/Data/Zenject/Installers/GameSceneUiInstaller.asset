@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ad0405b0816435f8b111444531ec998, type: 3}
-  m_Name: UIPrefabInstaller
+  m_Name: GameSceneUiInstaller
   m_EditorClassIdentifier: 
   _screens: {fileID: 84312836984382515, guid: a80371354db32034195128b5388fc608, type: 3}
   _eventSystem: {fileID: 2070332534453727909, guid: a6be85c36ede68a46849bcfe43990e33, type: 3}
