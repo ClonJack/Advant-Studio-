@@ -9,12 +9,12 @@ namespace Runtime.Views.Business.Player.Presentor
     {
         private ConcreteReactivePlayerModel _reactivePlayer;
         private ConcretePlayerModel _concretePlayerModel;
-        private readonly PlayerInfo _playerInfo;
+        private readonly PlayerView _playerView;
         public ConcreteReactivePlayerModel ReactivePlayer => _reactivePlayer;
-        public ConcretePlayerPresenter(ConcretePlayerModel concretePlayerModel, PlayerInfo playerInfo)
+        public ConcretePlayerPresenter(ConcretePlayerModel concretePlayerModel, PlayerView playerView)
         {
             _concretePlayerModel = concretePlayerModel;
-            _playerInfo = playerInfo;
+            _playerView = playerView;
 
             _reactivePlayer = new ConcreteReactivePlayerModel(concretePlayerModel);
         }
@@ -37,8 +37,8 @@ namespace Runtime.Views.Business.Player.Presentor
                     return;
                 }
 
-                _playerInfo.RepaintBalance(_reactivePlayer.Balance.Value);
-            }).AddTo(_playerInfo);
+                _playerView.RepaintBalance(_reactivePlayer.Balance.Value);
+            }).AddTo(_playerView);
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Runtime.Views.Business.Player.View
 {
-    public class PlayerInfo : MonoBehaviour
+    public class PlayerView : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _balance;
 

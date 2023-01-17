@@ -23,7 +23,7 @@ namespace Runtime.Configs.Save
             for (var i = 0; i < _concreteDataModels.Count; i++)
             {
                 var filePath =
-                    $"{(Application.dataPath)}{separator}Resources{separator}{DirectoryName}{separator}{FileName}{i}";
+                    $"{(Application.dataPath)}{separator}Generated{separator}{DirectoryName}{separator}{FileName}{i}";
                 GameSaver.BussinesSaver.Save(_concreteDataModels[i], i, filePath);
             }
             base.GenerateConfig();

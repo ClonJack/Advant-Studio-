@@ -20,7 +20,7 @@ namespace Runtime.Configs.Save
         {
             var separator = Path.DirectorySeparatorChar;
             var filePath =
-                $"{(Application.dataPath)}{separator}Resources{separator}{DirectoryName}{separator}{FileName}{0}";
+                $"{(Application.dataPath)}{separator}Generated{separator}{DirectoryName}{separator}{FileName}{0}";
             GameSaver.PlayerSaver.Save(_concretePlayer, 0, filePath);
             base.GenerateConfig();
         }

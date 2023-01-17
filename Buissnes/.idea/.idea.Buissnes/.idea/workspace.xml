@@ -2,13 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c424c7d-f085-4d95-aae4-677485378601" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Adressable_.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Adressable_/AddressableModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Adressable_/AddressableModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/LevelPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/LevelPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ProgressbarBusinessPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ProgressbarBusinessPresenter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/UpgradeButtonPresenter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/UpgradeButtonPresenter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Buissnes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Buissnes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Zenject/Installers/UIPrefabInstaller.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Data/Zenject/Installers/UIPrefabInstaller.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/GameInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/GameInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/ProjectUIPrefabInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/GameSceneUIInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/ProjectUIPrefabInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/GameSceneUIInstaller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies0.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies1.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies2.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies3.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Companies/Companies4.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/User.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/User/User0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/User/User0.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/Save/ConfigBusinesses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/Save/ConfigBusinesses.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/Save/ConfigPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Configs/Save/ConfigPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Input.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Input/MasterInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Input/MasterInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Installers/Project/ProjectInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interfaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interfaces/ISignal.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Interfaces/ISignal.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderAndSaverService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderAndSaverService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalBalance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalBalance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalUpgradeLevel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Signals/SignalUpgradeLevel.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/BusinessManagementView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/BusinessManagementView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Presenter/ConcreteBusinessPresenters.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/GeneralView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/ConcreteBusiness/Views/GeneralView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Presentor/ConcretePlayerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/Presentor/ConcretePlayerPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View/PlayerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View/PlayerInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Runtime/Views/Business/Player/View/PlayerView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,12 +74,24 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/39/d4a83faa/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/3c/4e824eef/TweenExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/69/84368757/DOVirtual.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e40e5a8f982c4b618a930d29f9bd091c46a800/92/ece17545/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9384495d2a482ac7341d67ca84e16d267d16c62458a9d67a92b119199a9/System.Threading.Tasks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffe351aa6232372f4a3b8c3ff36a636f33de226f60e607acbfe569289d7289d/System.IO.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Prototype_Darkest_Dungeon/Darkest_Dungeon/Assets/Code/Installers/ArenaInstaller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/RectTransformAnchorSnapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Bussines/BussinesSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Save/Bussines/PlayerSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business/ConcreteBusinessDataModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Save/ConcreteModel/Business/UpgradeDataModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Save/GameSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Runtime/Save/LoaderAndSaverService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/SafeArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/AddressableAssetSettingsDefaultObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Settings/AddressableAssetGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Editor/Settings/AddressableAssetSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/Util/DelayedActionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.6.5/Editor/BurstAotCompiler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.3.0/InputSystem/Editor/AssetImporter/InputActionImporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/AspectRatioFitter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -83,10 +139,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="9108">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="9108" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -126,6 +182,14 @@
       <workItem from="1673259466719" duration="575000" />
       <workItem from="1673262809068" duration="1417000" />
       <workItem from="1673528675549" duration="1663000" />
+      <workItem from="1673867621762" duration="4216000" />
+      <workItem from="1673877521632" duration="374000" />
+      <workItem from="1673878072495" duration="6184000" />
+      <workItem from="1673892487802" duration="10156000" />
+      <workItem from="1673903174461" duration="3838000" />
+      <workItem from="1673907084364" duration="284000" />
+      <workItem from="1673907407126" duration="5795000" />
+      <workItem from="1673963724323" duration="14930000" />
     </task>
     <servers />
   </component>
@@ -167,5 +231,12 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#System.Collections.Generic.List`1" memberName="_syncRoot" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle`1" memberName="InternalOp" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle`1" memberName="PercentComplete" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

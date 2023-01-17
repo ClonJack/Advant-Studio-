@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.Linq;
 using Newtonsoft.Json;
+using Runtime.Adressable_;
 using Runtime.Save.Base;
 using Runtime.Save.ConcreteModel.Business;
 using Runtime.Save.ConcreteModel.Player;
@@ -12,22 +15,13 @@ namespace Runtime.Save
 {
     public class LoaderAndSaverService : IInitializable, IDisposable
     {
-        public readonly LoadModeL<ConcreteBusinessDataModel> BussinesLoadModeL =
-            new("Companies", GameSaver.BussinesSaver);
-
-        public LoadModeL<ConcretePlayerModel> PlayerLoadModeL =
-            new("User", GameSaver.PlayerSaver);
+        public LoadModeL<ConcretePlayerModel> PlayerModel = new(GameSaver.PlayerSaver);
+        public LoadModeL<ConcreteBusinessDataModel> Companies = new(GameSaver.BussinesSaver);
 
         private CompositeDisposable _compositeDisposable = new CompositeDisposable();
 
         public void Initialize()
         {
-            Observable.EveryApplicationPause().Subscribe(x =>
-            {
-                SaveCompaniesData();
-                SavePlayerData();
-            }).AddTo(_compositeDisposable);
-
 #if UNITY_EDITOR
 
             Observable.OnceApplicationQuit().Subscribe(x =>
@@ -36,7 +30,12 @@ namespace Runtime.Save
                 SaveCompaniesData();
                 SavePlayerData();
             }).AddTo(_compositeDisposable);
-
+#else
+            Observable.EveryApplicationPause().Subscribe(x =>
+            {
+                SaveCompaniesData();
+                SavePlayerData();
+            }).AddTo(_compositeDisposable);
 #endif
         }
 
@@ -48,42 +47,55 @@ namespace Runtime.Save
 
         private void SaveCompaniesData()
         {
-            for (var i = 0; i < BussinesLoadModeL.Data.Count; i++)
+            var data = Companies.GetData().GetAwaiter().GetResult();
+            if (data.Count == 0) return;
+            for (var i = 0; i < data.Count; i++)
             {
-                GameSaver.BussinesSaver.Save(BussinesLoadModeL.Data[i], i);
+                GameSaver.BussinesSaver.Save(data[i], i);
             }
         }
 
         private void SavePlayerData()
         {
-            GameSaver.PlayerSaver.Save(PlayerLoadModeL.Data[0]);
+            var data = PlayerModel.GetData().GetAwaiter().GetResult();
+            if (data.Count == 0) return;
+            GameSaver.PlayerSaver.Save(data[0]);
         }
     }
 }
 
 public class LoadModeL<T>
 {
-    public List<T> Data;
+    private readonly Saver<T> _saver;
 
-    private List<T> Load(string nameFolder, Saver<T> saver)
+    private List<T> _data;
+
+    public async UniTask<List<T>> GetData()
     {
-        var list = new List<T>();
-        var configOnInit = Resources.LoadAll<TextAsset>(nameFolder);
-        for (var i = 0; i < configOnInit.Length; i++)
+        return _data ??= await LoadJson();
+    }
+
+    private async UniTask<List<T>> LoadJson()
+    {
+        var data = new List<T>();
+        var configOnInit =
+            await new AddressableModel()
+                .LoadAddressableFolder<TextAsset>(_saver.DirectoryName);
+        for (var i = 0; i < configOnInit.Count; i++)
         {
-            if (saver.IsSaveExists(i))
+            var config = configOnInit[i];
+            if (_saver.IsSaveExists(i))
             {
-                list.Add(saver.Load(i));
+                data.Add(_saver.Load(i));
                 continue;
             }
 
             try
             {
-                var config = configOnInit[i];
                 var deserializedData = JsonConvert.DeserializeObject<T>(config.text);
 
-                list.Add(deserializedData);
-                saver.Save(deserializedData, i);
+                data.Add(deserializedData);
+                _saver.Save(deserializedData, i);
             }
             catch (Exception e)
             {
@@ -91,11 +103,12 @@ public class LoadModeL<T>
             }
         }
 
-        return list;
+        return data;
     }
 
-    public LoadModeL(string nameFolder, Saver<T> saver)
+
+    public LoadModeL(Saver<T> saver)
     {
-        Data = Load(nameFolder, saver);
+        _saver = saver;
     }
 }

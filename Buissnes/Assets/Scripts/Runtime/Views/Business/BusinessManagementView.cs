@@ -4,7 +4,9 @@ using Runtime.Views.Business.ConcreteBusiness.Views;
 using Runtime.Views.Business.Player.Presentor;
 using Runtime.Views.Business.Player.View;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
+using UniTaskVoid = Cysharp.Threading.Tasks.UniTaskVoid;
 
 namespace Runtime.Views.Business
 {
@@ -12,7 +14,7 @@ namespace Runtime.Views.Business
     {
         [SerializeField] private Transform _content;
         [SerializeField] private BusinessView _prefabBusiness;
-        [SerializeField] private PlayerInfo playerInfo;
+        [FormerlySerializedAs("playerInfo")] [SerializeField] private PlayerView playerView;
 
         [Inject] private LoaderAndSaverService _loaderAndSaverService;
 
@@ -20,23 +22,27 @@ namespace Runtime.Views.Business
 
         public void Repaint()
         {
-            RepaintPlayerInfo();
-            RepaintContainer();
+            RepaintContainer().Forget();
+            RepaintPlayerInfo().Forget();
         }
-        private void RepaintContainer()
+
+        private async UniTaskVoid RepaintContainer()
         {
-            foreach (var businessDataModel in _loaderAndSaverService.BussinesLoadModeL.Data)
+            var data = await _loaderAndSaverService.Companies.GetData();
+            foreach (var businessDataModel in data)
             {
                 var newBussines = Instantiate(_prefabBusiness, _content);
-                var newPresenterBusiness = new ConcreteBusinessPresenter(businessDataModel, newBussines,
+                var newPresenterBusiness = new ConcreteBusinessPresenters(businessDataModel, newBussines,
                     _concretePlayerPresenter);
                 newPresenterBusiness.StartHandler();
             }
         }
-        private void RepaintPlayerInfo()
+
+        private async UniTaskVoid RepaintPlayerInfo()
         {
+            var data = await _loaderAndSaverService.PlayerModel.GetData();
             _concretePlayerPresenter =
-                new ConcretePlayerPresenter(_loaderAndSaverService.PlayerLoadModeL.Data[0], playerInfo);
+                new ConcretePlayerPresenter(data[0], playerView);
             _concretePlayerPresenter.StartHandler();
         }
     }
