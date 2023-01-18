@@ -25,31 +25,27 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
 
             ReactiveBusinessModel = new ConcreteReactiveBusinessModel(СoncreteBusinessDataModel);
         }
+
         public void StartHandler()
         {
             NameCompany();
 
             var upgradeLevel = new LevelPresenter(this);
-            upgradeLevel.Start();
-
             var rightButtonUpgrade = new UpgradeButtonPresenter(ReactiveBusinessModel.UpgradeReactiveDataModel1,
                 BusinessView.UpgradeBusinessViewRight,
                 СoncreteBusinessDataModel.UpgradeDataModel1, this);
-            rightButtonUpgrade.Start();
-
             var leftButtonUpgrade = new UpgradeButtonPresenter(ReactiveBusinessModel.UpgradeReactiveDataModel2,
                 BusinessView.UpgradeBusinessViewLeft,
                 СoncreteBusinessDataModel.UpgradeDataModel2, this);
-            leftButtonUpgrade.Start();
-            
             var progressbar = new ProgressbarBusinessPresenter(this);
-            progressbar.Start();
         }
+
         private void NameCompany()
         {
             ReactiveBusinessModel.Name.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
                 BusinessView.GeneralView.RepaintNameInfo(x)).AddTo(BusinessView);
         }
+
         public float GetIncoming()
         {
             var income1 = ReactiveBusinessModel.UpgradeReactiveDataModel1.IsPurchased.Value

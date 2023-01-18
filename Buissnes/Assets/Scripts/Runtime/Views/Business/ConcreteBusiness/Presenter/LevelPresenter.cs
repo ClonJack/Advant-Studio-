@@ -25,31 +25,36 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
         public LevelPresenter(ConcreteBusinessPresenters concreteBusinessPresenters)
         {
             _concreteBusinessPresenters = concreteBusinessPresenters;
+
+            UpgradeButtonLevel();
+            RepaintLevel();
         }
 
-        public void Start()
+        private void RepaintLevel()
         {
-            _businessView.UpgradeLevelView.Icon.OnPointerClickAsObservable()
-                .Subscribe((data => OnClickUpgradeLevel(data).Forget()))
-                .AddTo(_businessView);
-
             _concreteBusinessPresenters.ReactiveBusinessModel.Level.ObserveEveryValueChanged(x => x.Value).Subscribe(
-                    x =>
+                    newLevel =>
                     {
-                        _concreteBusinessPresenters.СoncreteBusinessDataModel.Level =
-                            _concreteBusinessPresenters.ReactiveBusinessModel.Level.Value;
-                        _concreteBusinessPresenters.BusinessView.GeneralView.RepaintLevelInfo(x.ToString());
-                        RepaintPriceLevel();
+                        _concreteBusinessPresenters.СoncreteBusinessDataModel.Level = newLevel;
+                        _concreteBusinessPresenters.BusinessView.GeneralView.RepaintLevelInfo(newLevel.ToString());
+                        RepaintPriceLevel(newLevel, _concreteBusinessPresenters.ReactiveBusinessModel.BaseCost.Value);
                     })
                 .AddTo(_concreteBusinessPresenters.BusinessView);
         }
 
-        private void RepaintPriceLevel()
+        private void UpgradeButtonLevel()
         {
-            var price = (_concreteBusinessPresenters.ReactiveBusinessModel.Level.Value + 1) *
-                        _concreteBusinessPresenters.СoncreteBusinessDataModel.BaseCost;
+            _businessView.UpgradeLevelView.Icon.OnPointerClickAsObservable()
+                .Subscribe((data => OnClickUpgradeLevel(data).Forget()))
+                .AddTo(_businessView);
+        }
+
+        private void RepaintPriceLevel(int level, float baseCost)
+        {
+            var price = (level + 1) * baseCost;
             _concreteBusinessPresenters.BusinessView.UpgradeLevelView.RepaintPrice(price);
         }
+
         private async UniTaskVoid OnClickUpgradeLevel(PointerEventData x)
         {
             var priceLevel = (_reactiveBusinessModel.Level.Value + 1) * _businessModel.BaseCost;

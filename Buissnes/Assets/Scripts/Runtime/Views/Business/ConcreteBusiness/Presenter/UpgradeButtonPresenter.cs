@@ -10,12 +10,12 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
     public class UpgradeButtonPresenter
     {
         private readonly ConcreteBusinessPresenters _concreteBusinessPresenters;
-        
+
         private readonly UpgradeReactiveDataModel _modelUpgrade;
         private readonly UpgradeBusinessView _upgradeView;
         private readonly UpgradeDataModel _upgradeDataModel;
         private BusinessView _businessView => _concreteBusinessPresenters.BusinessView;
-        
+
         public UpgradeButtonPresenter(UpgradeReactiveDataModel modelUpgrade, UpgradeBusinessView upgradeView,
             UpgradeDataModel upgradeDataModel, ConcreteBusinessPresenters concreteBusinessPresenters)
         {
@@ -23,36 +23,33 @@ namespace Runtime.Views.Business.ConcreteBusiness.Presenter
             _upgradeView = upgradeView;
             _upgradeDataModel = upgradeDataModel;
             _concreteBusinessPresenters = concreteBusinessPresenters;
-        }
-        public void Start()
-        {
+
             UpgradeButton();
         }
+
         private void UpgradeButton()
         {
             _modelUpgrade.Name.ObserveEveryValueChanged(x => x.Value)
-                .Subscribe(x => _upgradeView.RepaintName(_modelUpgrade.Name.Value)).AddTo(_businessView);
+                .Subscribe(name => _upgradeView.RepaintName(name)).AddTo(_businessView);
 
-            _modelUpgrade.IncomeMultiplierPercentages.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
-            {
-                _upgradeView.RepaintIncomePercentages(_modelUpgrade
-                    .IncomeMultiplierPercentages.Value);
-            }).AddTo(_businessView);
+            _modelUpgrade.IncomeMultiplierPercentages.ObserveEveryValueChanged(x => x.Value)
+                .Subscribe(incomeMultiplierPercentages =>
+                    _upgradeView.RepaintIncomePercentages(incomeMultiplierPercentages)).AddTo(_businessView);
 
-            _modelUpgrade.IsPurchased.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
+            _modelUpgrade.IsPurchased.ObserveEveryValueChanged(x => x.Value).Subscribe(isPurchased =>
             {
-                if (_modelUpgrade.IsPurchased.Value)
+                if (isPurchased)
                 {
-                    _upgradeDataModel.IsPurchased = _modelUpgrade.IsPurchased.Value;
+                    _upgradeDataModel.IsPurchased = true;
                     _businessView.GeneralView.RepaintIncomeInfo($"{_concreteBusinessPresenters.GetIncoming()}");
                     _upgradeView.RepaintPurchasedState();
                 }
             }).AddTo(_businessView);
 
-            _modelUpgrade.Price.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
+            _modelUpgrade.Price.ObserveEveryValueChanged(x => x.Value).Subscribe(price =>
             {
                 if (!_modelUpgrade.IsPurchased.Value)
-                    _upgradeView.RepaintPrice(_modelUpgrade.Price.Value);
+                    _upgradeView.RepaintPrice(price);
                 else
                     _upgradeView.RepaintPurchasedState();
             }).AddTo(_businessView);

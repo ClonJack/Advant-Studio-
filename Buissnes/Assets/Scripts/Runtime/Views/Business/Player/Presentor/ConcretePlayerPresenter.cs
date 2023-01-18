@@ -11,6 +11,7 @@ namespace Runtime.Views.Business.Player.Presentor
         private ConcretePlayerModel _concretePlayerModel;
         private readonly PlayerView _playerView;
         public ConcreteReactivePlayerModel ReactivePlayer => _reactivePlayer;
+
         public ConcretePlayerPresenter(ConcretePlayerModel concretePlayerModel, PlayerView playerView)
         {
             _concretePlayerModel = concretePlayerModel;
@@ -18,6 +19,7 @@ namespace Runtime.Views.Business.Player.Presentor
 
             _reactivePlayer = new ConcreteReactivePlayerModel(concretePlayerModel);
         }
+
         public void StartHandler()
         {
             Balance();
@@ -29,9 +31,9 @@ namespace Runtime.Views.Business.Player.Presentor
         }
         private void Balance()
         {
-            _reactivePlayer.Balance.ObserveEveryValueChanged(x => x.Value).Subscribe(x =>
+            _reactivePlayer.Balance.ObserveEveryValueChanged(x => x.Value).Subscribe(balance =>
             {
-                if (_reactivePlayer.Balance.Value < 0)
+                if (balance < 0)
                 {
                     _reactivePlayer.Balance.Value = 0;
                     return;
